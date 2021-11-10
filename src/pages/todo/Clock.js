@@ -51,7 +51,7 @@ class Clock extends React.Component {
     컴포넌트가 화면에 전부 그려졌을 때 실행
   */ 
   componentDidMount() {
-    this.oneMinuteCall = setInterval(() => this.getDate(), 60000);
+    this.oneMinuteCall = setInterval(() => this.getDate(), 30000);
   }
 
   /*

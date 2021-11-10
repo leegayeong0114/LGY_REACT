@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import TodoList from "./TodoList";
+import { Link } from 'react-router-dom';
 
 // 입력받은 할 일은 저장하기위해 state을 사용하므로 클래스형 컴포넌트로 선언
 class Todo extends React.Component {
@@ -8,9 +9,9 @@ class Todo extends React.Component {
     todoList: [] // 여러개 저장하기 위해 배열로 선언
   }
   render() {
-    console.log(this.state.todoList)
     return (
       <Container>
+        <Link to="/mini-game">미니 게임 하러가기</Link>
         <Input
           placeholder = "오늘 할 일"
           onKeyPress = {this.handleInputKeyPress}
@@ -28,7 +29,7 @@ class Todo extends React.Component {
       target: {value}
     } = event;
     if (event.key === "Enter") {
-      console.log("value : " + value)
+      if(event.target.value) {
       /* 
         - todoList state에 저장
         - ...구문 : spread operator
@@ -42,6 +43,7 @@ class Todo extends React.Component {
         () => localStorage.setItem("todoList", JSON.stringify(this.state.todoList))
       )
       event.target.value = "";
+      }
     }
   }
 

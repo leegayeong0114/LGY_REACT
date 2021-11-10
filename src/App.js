@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Content from "./Content";
+import Content from "./pages/todo/Content";
 
 class App extends React.Component{
   state = {
@@ -20,17 +20,18 @@ class App extends React.Component{
 
   handleInputKeyPress = event => {
     if (event.key === "Enter") {
-      console.log(event.target.value);
-      // state에 저장하는 코드
-      this.setState({
-        query: event.target.value
-      })
-      event.target.value = "";
-      /* state 변경 시 
+      if(event.target.value) {
+        // state에 저장하는 코드
+        this.setState({
+          query: event.target.value
+        })
+        event.target.value = "";
+        /* state 변경 시 
         this.state.query = event.target.value ( X )  
         -> react가 변화 감지 못 한다
         항상 this.setState를 사용 할 것
-      */
+        */
+      }
     }
   }
 }
@@ -41,6 +42,7 @@ const Container = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: cover;
   background: 
     linear-gradient(
       to right,
@@ -48,8 +50,19 @@ const Container = styled.div`
       rgba(20, 20, 20, 0.7) 70%,
       rgba(20, 20, 20, 1)
     ),
-    url(https://source.unsplash.com/random/1920x1080?${props => props.query});
-  background-size: cover;
+    url(https://source.unsplash.com/random/1920x1080?${props => props.query}
+    );
+    @media (max-width: 768px) {
+    background: 
+    url(https://source.unsplash.com/random/768x1024?${props => props.query}
+    );    
+  }
+  @media all and (max-width:480px) { 
+    background: 
+    url(https://source.unsplash.com/random/480x960?${props => props.query}
+    );
+  }
+
 `;
 
 const SelectTheme = styled.input`
