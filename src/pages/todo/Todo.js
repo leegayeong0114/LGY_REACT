@@ -11,7 +11,7 @@ class Todo extends React.Component {
   render() {
     return (
       <Container>
-        <Link to="/mini-game">미니 게임 하러가기</Link>
+        <Link to="/mini-game"  style={{ color: 'white' }}>미니 게임 하러가기</Link>
         <Input
           placeholder = "오늘 할 일"
           onKeyPress = {this.handleInputKeyPress}
