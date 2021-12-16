@@ -1,0 +1,57 @@
+.movies .movie {
+  background-color: white;
+  margin-bottom: 70px;
+  font-weight: 300;
+  padding: 20px;
+  border-radius: 8px; /* 테두리를 둥굴게 */
+  color: #adaeb9;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.movies .movie a {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) 2fr;
+  grid-gap: 20px;
+  text-decoration: none;
+  color: inherit; /* 상위(부모) 엘리먼트의 색상을 상속 받을 때 필요한 속성 */
+}
+
+.movie img {
+  position: relative;
+  /* 태그의 위치를 살짝 변경하고 싶을 때 position: relative를 사용합니다.
+    이제 top(위), right(오른쪽), bottom(아래), left(왼쪽) 속성을 사용해 위치 조절이 가능 */
+  top: -50px;
+  max-width: 150px; /* max-width는 width 속성의 사용값이 자신의 값보다 커지는걸 방지 */
+  width: 100%;
+  margin-right: 30px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.movie .movie__title,
+.movie .movie__year {
+  margin: 0;
+  font-weight: 300;
+}
+
+.movie .movie__title {
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #2c2c2c;
+}
+
+.movie .movie__genres {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* 부모 넓이보다 요소들의 총 넓이가 크다면 나머지 요소들을 다음줄로 줄 바꿈 */
+  margin: 5px 0px;
+}
+
+.movie__genres li,
+.movie .movie__year {
+  margin-right: 10px;
+  font-size: 14px;
+}

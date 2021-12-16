@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Board from "./Board";
-import Timer from "./Timer";
+import Board from "../components/game/Board";
+import Timer from "../components/game/Timer";
+import Header from '../components/layout/Header';
 
 let array = [];
 for (let i = 1; i <= 25; i++) {
@@ -47,10 +48,14 @@ function OneToFifty() {
   };
 
   return (
-    <Container>
-      <Board numbers = {numbers} handleClick = {handleClick}></Board>
-      {gameFlag ? (<Timer/>) : (<StartButton onClick = {startGame}>start</StartButton>)}
-    </Container>
+    <div>
+      <Header></Header>
+      <Container className="container">
+      <h2>1 TO 50</h2>
+        <Board numbers = {numbers} handleClick = {handleClick}></Board>
+        {gameFlag ? (<Timer/>) : (<StartButton className="btn btn-warning" onClick = {startGame}>start</StartButton>)}
+      </Container>
+    </div>
   );
 }
 
@@ -63,9 +68,9 @@ const shuffleArray = array => {
 };
 
 const Container = styled.div`
-  width: 600px;
-  height: 800px;
-  border: 1px solid black;
+  width: 90%;
+  height: 90%;
+  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,6 +82,5 @@ const StartButton = styled.button`
   width: 100px;
   height: 50px;
 `;
-
 
 export default OneToFifty;

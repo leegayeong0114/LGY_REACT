@@ -13,8 +13,9 @@ function Board({numbers, handleClick}) {
 }
 
 const Container = styled.div`
-  width: 400px;
+  width: 90%;
   height: 400px;
+  max-width: 600px;
   border: 1px solid blue;
   display: grid;
   grid-template-columns: repeat(5, 1fr);

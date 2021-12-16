@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Content from "./pages/todo/Content";
+import Content from "./routes/Content";
+import Header from './components/layout/Header';
 
 class App extends React.Component{
   state = {
@@ -8,13 +9,18 @@ class App extends React.Component{
   };
   render(){
     return (
-      <Container query = {this.state.query}>
-        <SelectTheme 
-          placeholder = "테마를 입력하세요."
-          onKeyPress = {this.handleInputKeyPress}
-        ></SelectTheme>
-        <Content></Content>
-      </Container>
+      <div>
+        <Header></Header>
+        <div className="container">
+          <Container query = {this.state.query}>
+            <SelectTheme 
+              placeholder = "테마를 입력해보세요!"
+              onKeyPress = {this.handleInputKeyPress}
+              ></SelectTheme>
+            <Content></Content>
+          </Container>
+        </div>
+      </div>
     );
   }
 
@@ -38,7 +44,7 @@ class App extends React.Component{
 
 const Container = styled.div`
   position: absolute;
-  top: 0;
+  /* top: 0; */
   left: 0;
   width: 100%;
   height: 100%;
@@ -57,7 +63,7 @@ const Container = styled.div`
     url(https://source.unsplash.com/random/768x1024?${props => props.query}
     );    
   }
-  @media all and (max-width:480px) { 
+    @media all and (max-width:480px) { 
     background: 
     url(https://source.unsplash.com/random/480x960?${props => props.query}
     );
@@ -67,7 +73,7 @@ const Container = styled.div`
 
 const SelectTheme = styled.input`
   position: absolute;
-  top: 0;
+  top: 5px;
   right: 0;
   width: 190px;
   height: 33px;

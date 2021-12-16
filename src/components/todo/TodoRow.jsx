@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {IoMdRemoveCircleOutline} from 'react-icons/io'
 
 /*
   렌더링 최적화를 하기 위해 (Life Cycle method을 사용해야함)
@@ -20,11 +21,13 @@ class TodoRow extends React.Component {
     console.log(`${todo} 컴포넌트 렌더링`);
     return (
       <Container>
-        <RemoveBtn
-          onClick = {() => handleClickRemove(index)}
-          >X</RemoveBtn>
         <Text>
-          {todo}
+        <IoMdRemoveCircleOutline  
+          size="25"
+          onClick = {() => handleClickRemove(index)}
+          >
+          </IoMdRemoveCircleOutline>
+          {" "}{todo}
         </Text> 
       </Container>
     )
@@ -38,30 +41,14 @@ const Container = styled.div`
 `;
 
 const Text = styled.div`
-  display: inline;
+  /* display: inline; */
+  margin-left: 10px;
+  vertical-align: sub;
   /* cursor: pointer; */
-  font-size: 28px;
+  font-size: 22px;
   /* &:hover {
     opacity: 0.4;
   } */
-`;
-
-const RemoveBtn = styled.button`
-  border: 1px solid #bdbdbd;
-  box-sizing: border-box;
-  border-radius: 15px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 10px;
-  color: #bdbdbd;
-  padding: 10px 15px;
-  margin-right: 10px;
-  vertical-align: bottom;
-  :hover{
-    background: #bdbdbd;
-    color: #ffffff;
-  }
 `;
 
 export default TodoRow;

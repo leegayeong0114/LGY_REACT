@@ -24,12 +24,14 @@ function Timer() {
 
 const Container = styled.div`
   margin-top: 30px;
-  width: 100px;
+  width: 40%;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  border: 2px solid;
+  border-radius: 45%;
 `;
 
 const Front = styled.div`
