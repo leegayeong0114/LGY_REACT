@@ -44,7 +44,7 @@ class App extends React.Component{
 
 const Container = styled.div`
   position: absolute;
-  /* top: 0; test*/
+  /* top: 0; */
   left: 0;
   width: 100%;
   height: 100%;
