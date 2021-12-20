@@ -1,52 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../css/header.css";
+import { Navbar , Nav , NavDropdown , Container } from "react-bootstrap";
 
 function Header() {
   return (
-    // <div className="nav">
-    //   <Link to="/">Home</Link>
-    //   <Link to="/movie">Movie</Link>
-    //   <Link to="/count">Count</Link>
-    //   <Link to="/about">About</Link>
-    //   <button type="button" class="btn btn-info">info</button>
-    // </div>
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
-    <div className="container-fluid">
-      <Link className="navbar-brand" to="/">APP</Link>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-
-      <div className="collapse navbar-collapse" id="navbarsExample04">
-        <ul className="navbar-nav me-auto mb-2 mb-md-0">
-          <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/movie">Movie</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/mini-game">Game</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/food">Food</Link>
-          </li>
-          {/* <li className="nav-item">
-            <Link className="nav-link disabled" to="/">disabled</Link>
-          </li> */}
-          <li className="nav-item dropdown">
-            <Link className="nav-link dropdown-toggle" to="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</Link>
-            <ul className="dropdown-menu" aria-labelledby="dropdown04">
-              <li><Link className="dropdown-item" to="#">Action</Link></li>
-              <li><Link className="dropdown-item" to="#">Another action</Link></li>
-              <li><Link className="dropdown-item" to="#">Something else here</Link></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Container>
+    <Navbar.Brand><Link to="/" style={{ textDecoration: 'none', color: 'white' }} >App</Link></Navbar.Brand>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Collapse id="responsive-navbar-nav">
+      <Nav className="me-auto">
+        <Nav.Link><Link to="/" style={{ textDecoration: 'none', color: 'white' }} >Home</Link></Nav.Link>
+        <Nav.Link><Link to="/movie" style={{ textDecoration: 'none', color: 'white' }}>Movie</Link></Nav.Link>
+        <Nav.Link><Link to="/mini-game" style={{ textDecoration: 'none', color: 'white' }}>Game</Link></Nav.Link>
+        <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+          <NavDropdown.Item><Link to="/food" style={{ textDecoration: 'none', color: 'black' }}>Food</Link></NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item><Link to="/food" style={{ textDecoration: 'none', color: 'black' }}>Food</Link></NavDropdown.Item>
+        </NavDropdown>
+      </Nav>
+      {/* <Nav>
+        <Nav.Link href="#deets">More deets</Nav.Link>
+        <Nav.Link eventKey={2} href="#memes">
+          Dank memes
+        </Nav.Link>
+      </Nav> */}
+    </Navbar.Collapse>
+    </Container>
+  </Navbar>
   );
 }
 

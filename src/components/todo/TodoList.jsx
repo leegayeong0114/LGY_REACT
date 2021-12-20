@@ -22,7 +22,7 @@ const TodoList = ({ todoList, handleClickRemove }) => (
 )
 
 const Container = styled.div`
-  margin-top: 33px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

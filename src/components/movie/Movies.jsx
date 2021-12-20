@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Movie from './Movie';
 import '../../css/movies.css';
+import {Spinner} from 'react-bootstrap';
 
 class Movies extends React.Component {
 
@@ -28,8 +29,23 @@ class Movies extends React.Component {
       <div className="container">
         {" "}
         {isLoading ?  
-          <div>
-            <span className="loader__text">Loading...</span>
+          <div style={{ marginTop: '50px' }}>  
+            <Spinner animation="border" variant="primary" />
+            <Spinner animation="border" variant="secondary" />
+            <Spinner animation="border" variant="success" />
+            <Spinner animation="border" variant="danger" />
+            <Spinner animation="border" variant="warning" />
+            <Spinner animation="border" variant="info" />
+            <Spinner animation="border" variant="light" />
+            <Spinner animation="border" variant="dark" />
+            <Spinner animation="grow" variant="primary" />
+            <Spinner animation="grow" variant="secondary" />
+            <Spinner animation="grow" variant="success" />
+            <Spinner animation="grow" variant="danger" />
+            <Spinner animation="grow" variant="warning" />
+            <Spinner animation="grow" variant="info" />
+            <Spinner animation="grow" variant="light" />
+            <Spinner animation="grow" variant="dark" />
           </div>
           : 
           <div className="movies">

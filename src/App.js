@@ -75,7 +75,7 @@ const SelectTheme = styled.input`
   position: absolute;
   top: 5px;
   right: 0;
-  width: 190px;
+  width: 225px;
   height: 33px;
   padding: 3px;
   background: transparent;

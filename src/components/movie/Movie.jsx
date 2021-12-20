@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import '../../css/movie.css'
+import { Card , Button } from 'react-bootstrap';
+import styled from "styled-components";
 
 function Movie({ title, year, summary, poster, genres }) {
   return (
@@ -21,6 +23,17 @@ function Movie({ title, year, summary, poster, genres }) {
         <p className="movie__summary">{summary.slice(0, 100)}...</p>
       </div>
     </div>
+    // <Card style={{ width: '18rem' }}>
+    //   <Card.Img variant="top"/>
+    //   <img src={poster} alt={title}></img>
+    //   <Card.Body>
+    //     <Card.Title>{title}</Card.Title>
+    //     <Card.Text>
+    //       {summary.slice(0, 100)}...
+    //     </Card.Text>
+    //     <Button variant="primary">Go somewhere</Button>
+    //   </Card.Body>
+    // </Card>    
   );
 }
 

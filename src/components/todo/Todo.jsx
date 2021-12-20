@@ -90,7 +90,7 @@ const Container = styled.div`
 
 const Input = styled.input`
   width: 80%;
-  height: 33px;
+  height: 40px;
   padding: 7px;
   outline: none;
   border: 1px solid silver;
