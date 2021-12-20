@@ -1,3 +1,7 @@
+## 20211220 배포
+react-live-clock 라이브러리를 추가했었는데 배포할 때 계속 실패했다.
+그래서 추가한 라이브러리를 지우고 다시 배포했더니 배포 성공!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
