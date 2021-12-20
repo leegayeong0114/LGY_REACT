@@ -7,17 +7,19 @@ function Header() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand><Link to="/" style={{ textDecoration: 'none', color: 'white' }} >App</Link></Navbar.Brand>
+    <Navbar>
+      <Link to="/" className="navbar-brand">App</Link>
+    </Navbar>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link><Link to="/" style={{ textDecoration: 'none', color: 'white' }} >Home</Link></Nav.Link>
-        <Nav.Link><Link to="/movie" style={{ textDecoration: 'none', color: 'white' }}>Movie</Link></Nav.Link>
-        <Nav.Link><Link to="/mini-game" style={{ textDecoration: 'none', color: 'white' }}>Game</Link></Nav.Link>
+        <Link to="/" className="nav-link">Home</Link>
+        <Link to="/movie" className="nav-link">Movie</Link>
+        <Link to="/mini-game" className="nav-link">Game</Link>
         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-          <NavDropdown.Item><Link to="/food" style={{ textDecoration: 'none', color: 'black' }}>Food</Link></NavDropdown.Item>
+          <Link to="/food" className="dropdown-item">Food</Link>
           <NavDropdown.Divider />
-          <NavDropdown.Item><Link to="/food" style={{ textDecoration: 'none', color: 'black' }}>Food</Link></NavDropdown.Item>
+          <Link to="/food" className="dropdown-item">Food</Link>
         </NavDropdown>
       </Nav>
       {/* <Nav>
