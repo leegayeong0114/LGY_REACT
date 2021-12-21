@@ -8,7 +8,7 @@ function Header() {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container>
     <Navbar>
-      <Link to="/" className="navbar-brand">App</Link>
+      <Link to="/" className="navbar-brand">React App</Link>
     </Navbar>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">

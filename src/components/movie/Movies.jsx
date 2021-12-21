@@ -26,7 +26,7 @@ class Movies extends React.Component {
   render() {
     const { isLoading, movies } = this.state;
     return (
-      <div className="container">
+      <div className="container w-auto">
         {" "}
         {isLoading ?  
           <div style={{ marginTop: '50px' }}>  
@@ -48,7 +48,7 @@ class Movies extends React.Component {
             <Spinner animation="grow" variant="dark" />
           </div>
           : 
-          <div className="movies">
+          <div className="w-auto movies">
             {movies.map((movie) => (
               <Movie
                 key={movie.id}

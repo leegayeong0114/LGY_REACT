@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 function Movie({ title, year, summary, poster, genres }) {
   return (
-    <div className="movie">
+    <div className="w-80 movie">
       <img src={poster} alt={title}></img>
       <div className="movie__data">
         <h3 className="movie__title">{title}</h3>
