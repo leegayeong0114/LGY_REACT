@@ -1,6 +1,6 @@
 ## 20211221 배포
-/food에서 spring boot api를 사용하여 데이터를 가져왔지만 \ 
-배포한 후 mixed content로 가져오지를 못했다. \
+/food에서 spring boot api를 사용하여 데이터를 가져왔지만\ 
+배포한 후 mixed content로 가져오지를 못했다.\
 임시로 메타 태그에 박아 두었지만 역시 가져오지 못 했다.
 
 ## 20211220 배포
